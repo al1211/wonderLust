@@ -83,6 +83,10 @@ res.locals.currUser=req.user;
   next();
 })
 
+  app.get("/",(req,res)=>{
+    res.redirect("/listings");
+  })
+
 app.use("/listings", listingsRoutes);
 app.use("/listings/:id/reviews", ReviewRoutes);
 app.use('/',userRoutes);
