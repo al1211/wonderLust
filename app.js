@@ -93,8 +93,8 @@ app.use((err, req, res, next) => {
   res.render("error.ejs", { message });
 });
 
-let PORT = 8080;
+let port = process.env.PORT || 4000;
 
-app.listen(PORT, () => {
+app.listen(port, () => {
   console.log("server is create");
 });
